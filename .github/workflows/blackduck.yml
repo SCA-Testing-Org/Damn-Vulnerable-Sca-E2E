@@ -11,6 +11,10 @@ jobs:
   blackducksca:
     runs-on: [ ubuntu-latest ]
     steps:
+      - name: Environment Variables
+        run: |
+          env
+          echo $JAVA_HOME
       - name: Checkout Source
         uses: actions/checkout@v4
       - name: Black Duck Security Scan
